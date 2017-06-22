@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/Swift-Yah/GraphQLGettingStarted/issues"
   },
-  "homepage": "https://github.com/Swift-Yah/GraphQLGettingStarted#readme"
+  "homepage": "https://github.com/Swift-Yah/GraphQLGettingStarted#readme",
+  "dependencies": {
+    "graphql": "^0.10.3"
+  }
 }
