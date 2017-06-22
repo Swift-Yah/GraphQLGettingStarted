@@ -1,0 +1,26 @@
+{
+  "name": "graphqlgettingstarted",
+  "version": "1.0.0",
+  "description": "My own path over a introduction to GraphQL.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Swift-Yah/GraphQLGettingStarted.git"
+  },
+  "keywords": [
+    "graph-ql",
+    "facebook",
+    "api",
+    "js",
+    "yhwh"
+  ],
+  "author": "Rafael da Silva Ferreira <rafael@swift-yah.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Swift-Yah/GraphQLGettingStarted/issues"
+  },
+  "homepage": "https://github.com/Swift-Yah/GraphQLGettingStarted#readme"
+}
