@@ -6,6 +6,9 @@ let { buildSchema } = require('graphql');
 let schema = buildSchema(`
     type Query {
         hello: String
+        quoteOfTheDay: String
+        random: Float!
+        rollThreeDices: [Int]
     }
 `);
 
@@ -13,6 +16,15 @@ let schema = buildSchema(`
 let root = {
     hello: () => {
         return 'Hello world!';
+    },
+    quoteOfTheDay: () => {
+        return Math.random() < 0.5 ? 'Take it easy' : 'Salvation comes from Jesus';
+    },
+    random: () => {
+        return Math.random();
+    },
+    rollThreeDices: () => {
+        return [1, 2, 3].map(_ => 1 + Math.floor(Math.random() * 6))
     }
 };
 
