@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/Swift-Yah/GraphQLGettingStarted#readme",
   "dependencies": {
+    "crypto": "0.0.3",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.3"
