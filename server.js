@@ -30,6 +30,7 @@ let schema = buildSchema(`
         getDice(numSides: Int): RandomDice
         catchMessage: String
         getMessage(id: ID!): Message
+        ip: String
     }
     
     type Mutation {
@@ -66,6 +67,12 @@ class RandomDice {
 // Maps username to content.
 let fakeMessageDatabase = {};
 let fakeDatabase = {};
+
+function loggingMiddleware(req, res, next) {
+    console.log('ip:', req.ip);
+
+    next();
+}
 
 // The root provides a resolver function for each API endpoints.
 let root = {
@@ -119,6 +126,9 @@ let root = {
         fakeDatabase[id] = input;
 
         return new Message(id, input);
+    },
+    ip: (args, request) => {
+        return request.ip;
     }
 };
 
@@ -129,6 +139,7 @@ let httpSettings = {
     graphiql: true
 };
 
+app.use(loggingMiddleware);
 app.use('/graphql', graphQLHTTP(httpSettings));
 app.listen(4000);
 
